@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/homeFragment"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph">
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        tools:layout="@layout/fragment_play_game"
+        android:name="com.example.rockpaperscissors.View.PlayGameFragment">
+        <action
+            android:id="@+id/action_homeFragment_to_basicGamePlayFragment"
+            app:destination="@id/basicGamePlayFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_advancedGamePlayFragment"
+            app:destination="@id/advancedGamePlayFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        tools:layout="@layout/fragment_about"
+        android:name="com.example.rockpaperscissors.View.AboutFragment"/>
+
+    <fragment
+        android:id="@+id/instructionsFragment"
+        tools:layout="@layout/fragment_instructions"
+        android:name="com.example.rockpaperscissors.View.InstructionsFragment"/>
+
+    <fragment
+        android:id="@+id/basicGamePlayFragment"
+        tools:layout="@layout/fragment_basic_game_play"
+        android:name="com.example.rockpaperscissors.View.BasicGamePlay"/>
+
+    <fragment
+        android:id="@+id/advancedGamePlayFragment"
+        tools:layout="@layout/fragment_advanced_game_play"
+        android:name="com.example.rockpaperscissors.View.AdvancedGamePlayFragment"/>
+</navigation>

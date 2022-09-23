@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">RockPaperScissors</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="human_choice">Human Choice</string>
+    <string name="comp_choice">Computer Choice</string>
+    <string name="scissors">Scissors</string>
+    <string name="paper">Paper</string>
+    <string name="rock">Rock</string>
+    <string name="fifteen_rn">Fifteen rounds</string>
+    <string name="ten_rn">Ten rounds</string>
+    <string name="five_rn">Five rounds</string>
+    <string name="rn">Round:</string>
+    <string name="rns">Rounds:</string>
+    <string name="rn1">Round:</string>
+    <string name="lizard">Lizard</string>
+    <string name="spock">Spock</string>
+</resources>

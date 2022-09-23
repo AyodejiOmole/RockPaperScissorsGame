@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".View.AdvancedGamePlayFragment"
+    android:layout_marginVertical="20sp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="15sp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rn1"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:layout_marginHorizontal="10sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textColor="@color/purple_500"
+            android:layout_marginHorizontal="10sp"
+            android:id="@+id/currentRound"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/ic_chevron_left"
+        android:id="@+id/backArrow"
+        android:contentDescription="BackArrow"
+        tools:ignore="HardcodedText"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/backArrow"
+        android:gravity="center"
+        android:layout_marginTop="30sp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/human_choice"
+
+            android:textSize="24sp"
+
+            android:id="@+id/humanText"/>
+
+        <ImageView
+            android:layout_width="160sp"
+            android:layout_height="160sp"
+            android:src="@drawable/rock"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/humanText"
+            android:id="@+id/usersChoice"
+            android:contentDescription="HumanImage"
+            tools:ignore="HardcodedText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/comp_choice"
+            app:layout_constraintTop_toBottomOf="@+id/usersChoice"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textSize="24sp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/compText"/>
+
+        <ImageView
+            android:layout_width="160sp"
+            android:layout_height="160sp"
+            android:src="@drawable/sciccors"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/compText"
+            android:id="@+id/computerChoice"
+            android:contentDescription="ComputerImage"
+            tools:ignore="HardcodedText"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonLay"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/computerChoice"
+            android:gravity="center"
+            android:layout_marginTop="20sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rock"
+                    android:layout_marginHorizontal="20sp"
+                    android:id="@+id/rockButton"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/paper"
+                    android:layout_marginHorizontal="20sp"
+                    android:id="@+id/paperButton"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/scissors"
+                    android:layout_marginHorizontal="10sp"
+                    android:id="@+id/sciButton"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lizard"
+                    android:layout_marginHorizontal="10sp"
+                    android:id="@+id/lizardButton"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/spock"
+                    android:layout_marginHorizontal="10sp"
+                    android:id="@+id/spockButton"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/buttonLay"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20sp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Score: "
+                tools:ignore="HardcodedText"
+                android:textStyle="bold"
+                android:textColor="@color/purple_500"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                tools:ignore="HardcodedText"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:id="@+id/humanScore"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Computer Score: "
+                tools:ignore="HardcodedText"
+                android:textStyle="bold"
+                android:textColor="@color/purple_500"
+                android:textSize="20sp"
+                android:layout_marginStart="10sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                tools:ignore="HardcodedText"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:id="@+id/computerScore"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
