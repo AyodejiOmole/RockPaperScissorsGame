@@ -6,7 +6,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph">
 
-
     <fragment
         android:id="@+id/homeFragment"
         tools:layout="@layout/fragment_play_game"
